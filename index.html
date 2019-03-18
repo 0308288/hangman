@@ -9,7 +9,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <script src="main.js"></script>
 </head>
 <body>
     <!-- Bootstrap Container will hold everything-->
@@ -25,18 +24,55 @@
         <!--Game counters all held here. Panels are being used to hold various sections.-->
         <div class="row">
             <div class="col-lg">
+
                 <!--First panel: holds the word to guess (blanks and guessed word)-->
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title"><strong>Word to Guess</strong></h3>
                     </div>
-                    
-
-
-                    
+                    <div class="panel-body">
+                        <!--this h3 section called wordblanks is what we'll be replacing with letters-->
+                        <h3 id="wordblanks">_ _ _ _ _ _ _ _</h3>
+                    </div>
                 </div>
+
+                <!--Second Panel: holds the list of wrong user guess-->
+                <div class="panel-default">
+                    <div class="panel-body">
+                        <!-- <!this span section called user guesses is where we will be dumping the wrong guesses-->
+                        <strong>Wrong Guesses: </strong> <span id="wrong-guesses"></span>
+                    </div>
+                </div>
+
+                <!--Third Panel: holds the list of wrong user guess-->
+                <div class="panel-default">
+                    <div class="panel-body">
+                        <!-- <!this span section called guesses left is where we will be dumping the wrong guesses-->
+                        <strong>Guesses Left: </strong> <span id="guesses-left"></span>
+                    </div>
+                </div>
+
+                <!--Fourth Panel: holds the number of wins-->
+                <div class="panel-default">
+                    <div class="panel-body">
+                        <!-- <!this span is called winCounter and is where we will be dumping the number of wins-->
+                        <strong>Wins: </strong> <span id="win-counter"></span>
+                    </div>
+                </div>
+
+                <!--Fourth Panel: holds the number of loss-->
+                <div class="panel-default">
+                        <div class="panel-body">
+                            <!-- <!this span is called lossCounter and is where we will be dumping the number of wins-->
+                            <strong>Loss: </strong> <span id="loss-counter"></span>
+                        </div>
+                </div>
+    
             </div>
         </div>
     </div>
+
+    <!--loaded at the bottom so it waits for the html content to display first. If you put this at the top it will crash because the html IDs wont exist yet-->
+    <script src="main.js"></script>
 </body>
 </html>
