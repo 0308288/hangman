@@ -61,4 +61,67 @@ function startGame(){
 
     // Prints the blanks at the beginning of each round in the HTML
     document.getElementById("wrong-guesses").innerHTML = wrongGuesses.join("");
+
+    // Clears the wrong guesses from the previous round
+    document.getElementById("wrong-guesses").innerhtml = wrongGuesses.join("");
+}
+
+// It's where we will do all of the comparisons for matches
+function checkLetters(letter) {
+
+    // This boolean will be toggled based on whether or not a user letter is found
+    var letterInWord = false;
+
+    // Checks if a letter exists inside of an array at all
+    for (var i=0; i < numBlanks; i++) {
+        // If the letter exists then toggle this boolean to true. This will be used in the next step
+        letterInWord = true;
+    }
+}
+
+// If the letter exists somewhere in the word, then it figures ut exactly where (which index?)
+if (letterInWord) {
+    // Loop through the word 
+    for (var j=0; j < numBlanks; j++) {
+
+        //Populate the blanksAndSuccesses with every instance of the letter
+        if (chosenWord[j] === letter) {
+
+            // Here we set
+        }
+    
+        // Logging for testing
+        console.log(blanksAndSuccesses);
+    }
+
+    
+
+    // IF the letter doesnt exist at all...
+    else {
+
+        // ..then we add the letter to the list of wrong letters and we subtract one of the guesses
+        wrongGuesses.push(letter);
+        numGuesses--;
+    }
+}
+
+// Here we will have all of the code that needs to be run after each guess is made
+function roundComplete() {
+
+    // First log an initial status update in the console telling us how many wins, losses, and guesses left
+    console.log(`WinCount: ${winCounter} | LossCount: ${losscounter} | NumGuesses: ${numGuesses}`)
+
+    // Update the HTML to reflect the new number of guesses. Also update the correct guesses
+    document.getElementById("guesses-left").innerHTML = numGuesses;
+
+    // This will print the array of guesses anf blanks onto the page
+    document.getElementById("word-blanks").innerHTML = wrongGuesses.join(" ");
+
+    //This will print the wrong guesses onto the page
+    document.getElementById("wrong-guesses").innerHTML = wrongGuesses.join(" ");
+
+    //IF we have gotten all the letters to mathc the solution...
+    if (lettersInChosenWord.toString() === blanksAndSuccesses.toString()) {
+        
+    }
 }
