@@ -1,0 +1,22 @@
+h1,
+h2,
+h3,
+strong,
+small,
+span {
+    color:red;
+}
+
+.jumbotron {
+    background-color: rgb(0, 102, 255);
+
+}
+
+.row {
+    background-color: yellow;
+}
+
+
+body {
+    background: url(https://tse4.mm.bing.net/th?id=OIP.J9ySfraj4VJPkzIz3F4-_gHaEU&pid=Api&P=0&w=273&h=160);
+}
